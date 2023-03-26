@@ -7,24 +7,24 @@
   <!-- 🐨 add React and ReactDOM on the page.
        💰 Here are script tags that'll do the job:
     -->
-	<script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
-	<script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
-    
+  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+
   <script type="module">
     const rootElement = document.getElementById('root');
-		const root = ReactDOM.createRoot(rootElement);
+    const root = ReactDOM.createRoot(rootElement);
 
-		const spanGenerator = (text) => 
-			text.split(' ').map(t => 
-				React.createElement('span', {
-					children: t,
-				})
-			);
+    const spanGenerator = text =>
+      text.split(' ').map(t =>
+        React.createElement('span', {
+          children: t,
+        }),
+      );
 
-		const reactElement = React.createElement('div', { 
-			children: spanGenerator('Hello World'),
-			className: 'container'
-		});
-		root.render(reactElement);
+    const reactElement = React.createElement('div', {
+      children: spanGenerator('Hello World'),
+      className: 'container',
+    });
+    root.render(reactElement);
   </script>
 </body>
